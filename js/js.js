@@ -72,7 +72,14 @@ const options = {
 };
 let dom = [];
 function getTimeZoneDetails(e) {
-    fetch(endpoint + e.abbr)
+    fetch(endpoint + e.abbr, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        },
+    })
         .then((response) => response.json())
         .then((response) => {
             let zone = e.zone;
