@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;500&display=swap");
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+body {
+    font-family: "Oxanium", cursive;
+    font-weight: 500;
+}
+a {
+    transition: all 0.25s ease-out 0s;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+header {
+    background: #ffffff;
+    padding: 1rem 0px;
+}
+header .container {
+    justify-content: space-between;
+}
+/* header .container ul {
+    flex-direction: row;
+    list-style: none;
+}
+header .container ul a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 0px 15px;
+} */
+section {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 2rem 0px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section ul {
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section ul li {
+    list-style: none;
+    border: 1px dotted #ffffff;
+    padding: 5px;
+    width: 48%;
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 1200px) {
+    section ul li {
+        width: 98%;
+    }
+}
+.card {
+    width: 100%;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+    .card {
+        height: auto;
+    }
+}
+.card::before {
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.card .card_content {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+footer {
+    padding: 1rem 0px;
+    background: #e8e8e6;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+footer a {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+}
+footer a:hover,
+footer a:focus {
+    color: rgba(0, 0, 0, 0.65);
+}
+.map {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+}
+.map::before {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.map_content {
+    display: flex;
+    padding: 2.5% 15%;
+    height: 100%;
+    overflow: scroll;
+}
+/* .image {
+    display: flex;
+    align-items: center;
+} */
+.overflow_hidden {
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 2%;
+    top: 2%;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    text-indent: -999px;
+    overflow: hidden;
+}
+.close::before,
+.close::after {
+    width: 40px;
+    height: 1px;
+    background-color: #ffffff;
+    content: "";
+    position: absolute;
+    right: 13%;
+    top: 47%;
+    transform: rotate(-45deg);
+}
+.close::after {
+    transform: rotate(45deg);
+}
+.map_options li {
+    /* transform: rotate(-90deg); */
+    list-style: none;
+    display: inline-block;
+    padding: 0px 10px;
+}
+.map_options li a {
+    background: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: 2rem;
+    display: block;
+    text-align: center;
+    padding: 0px 2rem;
+    color: #ffffff;
+}
+.map_options li a:hover,
+.map_options li a:focus {
+    background: #585454;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Current Time (World Clock)</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="description"
+		content="Current Time (World Clock) for countries across the world. Schedule meetings the easy way using time across several time zones across the world." />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image"
+		content="https://i.pinimg.com/280x280_RS/bb/1f/b5/bb1fb55b6d5f7213dddf86544642af0d.jpg" />
+	<meta name="twitter:site" content="" />
+	<meta name="twitter:creator" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://parceljs.org" />
+	<meta property="og:title" content="Current Time (World Clock) for countries across the world." />
+	<meta property="og:description"
+		content="Current Time (World Clock) for countries across the world. Schedule meetings the easy way using time across several time zones across the world." />
+	<meta property="og:image" content="https://i.pinimg.com/280x280_RS/bb/1f/b5/bb1fb55b6d5f7213dddf86544642af0d.jpg" />
+
+	<link rel="SHORTCUT ICON" href="images/favicon.png" type="image/ico" />
+	<link rel="stylesheet" href="css/css.css" />
+</head>
+
+<body id="web">
+	<!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+	<header class="d-flex align-items-center">
+		<div class="container d-flex">
+			<img src="images/logo.png" width="30%" alt="World Time" />
+			<ul class="map_options d-flex align-items-center">
+				<li><a href="#" id="us-map" onclick="showPopUp('us')">US Map</a></li>
+				<li><a href="#" id="eu-map" onclick="showPopUp('eu')">EU Map</a></li>
+			</ul>
+		</div>
+	</header>
+	<section class="d-flex">
+		<div class="container">
+			<ul class="d-flex" id="allZones">
+				<!-- <li>
+					<div class="card" id="ist">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li> -->
+				<li>
+					<div class="card" id="pct">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="mt">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="ct">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="et">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="wet">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="cet">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="eet">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card" id="most">
+						<img src="images/india.jpeg" width="100%" />
+						<div class="card_content">
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<footer>Hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a></footer>
+	<div class="map overflow_hidden hide" id="map">
+		<div class="map_content">
+			<div class="image hide" id="eu">
+				<img src="images/european-time-zones.png" width="100%" />
+			</div>
+			<div class="image hide" id="us">
+				<img src="images/US-time-zone.jpeg" width="100%" />
+			</div>
+			<a class="close" href="#" onclick="hidePopUp()">&nbsp;</a>
+		</div>
+	</div>
+	<script src="js/js.js" async defer></script>
+</body>
+
+</html>
