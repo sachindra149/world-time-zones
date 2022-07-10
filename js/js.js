@@ -87,9 +87,6 @@ function getTimeZoneDetails(e) {
             let time = response.time;
             let date = response.date;
             let dst = response.dstActive ? " - DST" : "";
-            // console.log(e.zone);
-            // console.log(e);
-            // console.log(typeof e);
             let result =
                 "<div class='card'><img src='" +
                 e.image +
