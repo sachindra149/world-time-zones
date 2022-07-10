@@ -71,36 +71,51 @@ const options = {
     },
 };
 let dom = [];
-function getTimeZoneDetails(e) {
-    fetch(endpoint + e.abbr, {
-        method: "GET",
-        mode: "cors",
-        headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-        },
-    })
-        .then((response) => response.json())
-        .then((response) => {
-            let zone = e.zone;
-            let day = response.dayOfWeek;
-            let time = response.time;
-            let date = response.date;
-            let dst = response.dstActive ? " - DST" : "";
-            let result =
-                "<div class='card'><img src='" +
-                e.image +
-                "' width='100%' /><div class='card_content'><h2>" +
-                time +
-                "</h2><h3>" +
-                zone +
-                dst +
-                "</h3><h4>" +
-                e.states +
-                "</h4></div></div>";
-            document.getElementById(e.id).innerHTML = result;
-        })
-        .catch((err) => console.error(err));
+// function getTimeZoneDetails(e) {
+//     fetch(endpoint + e.abbr)
+//         .then((response) => response.json())
+//         .then((response) => {
+//             let zone = e.zone;
+//             let day = response.dayOfWeek;
+//             let time = response.time;
+//             let date = response.date;
+//             let dst = response.dstActive ? " - DST" : "";
+//             let result =
+//                 "<div class='card'><img src='" +
+//                 e.image +
+//                 "' width='100%' /><div class='card_content'><h2>" +
+//                 time +
+//                 "</h2><h3>" +
+//                 zone +
+//                 dst +
+//                 "</h3><h4>" +
+//                 e.states +
+//                 "</h4></div></div>";
+//             document.getElementById(e.id).innerHTML = result;
+//         })
+//         .catch((err) => console.error(err));
+// }
+async function getTimeZoneDetails(e) {
+    const response = await fetch(endpoint + e.abbr);
+    const data = await response.json();
+    let zone = e.zone;
+    let day = data.dayOfWeek;
+    let time = data.time;
+    let date = data.date;
+    let dst = data.dstActive ? " - DST" : "";
+    let result =
+        "<div class='card'><img src='" +
+        e.image +
+        "' width='100%' /><div class='card_content'><h2>" +
+        time +
+        "</h2><h3>" +
+        zone +
+        dst +
+        "</h3><h4>" +
+        e.states +
+        "</h4></div></div>";
+    document.getElementById(e.id).innerHTML = result;
+    return data;
 }
 for (let i = 0; i < arr.length; i++) {
     getTimeZoneDetails(arr[i]);
