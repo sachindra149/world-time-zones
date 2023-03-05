@@ -1,16 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500&display=swap");
+
 * {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
     color: #ffffff;
 }
+html {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
 body {
-    font-family: "Oxanium", cursive;
-    font-weight: 500;
+    font-family: "Chakra Petch", cursive;
+    font-weight: 400;
+    font-size: 16px;
 }
 a {
     transition: all 0.25s ease-out 0s;
+}
+header,
+section,
+footer {
+    float: left;
+    width: 100%;
 }
 .d-flex {
     display: flex;
@@ -25,7 +38,7 @@ a {
     text-align: center;
 }
 .container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 @media (min-width: 576px) {
@@ -93,15 +106,18 @@ section ul li {
 .card {
     width: 100%;
     position: relative;
-    height: 200px;
+    min-height: 200px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media only screen and (max-width: 991px) {
     .card {
         height: auto;
     }
 }
-.card::before {
+.image::before {
     background: rgba(0, 0, 0, 0.65);
     width: 100%;
     height: 100%;
@@ -112,9 +128,14 @@ section ul li {
     z-index: 0;
 }
 .card .card_content {
-    position: absolute;
+    /* position: absolute;
     bottom: 0px;
-    left: 15px;
+    left: 15px; */
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1,
 h2,
@@ -177,6 +198,10 @@ footer a:focus {
     height: 100%;
     overflow: scroll;
 }
+.map_content .image img {
+    position: relative;
+    z-index: 10;
+}
 /* .image {
     display: flex;
     align-items: center;
@@ -185,7 +210,7 @@ footer a:focus {
     overflow: hidden;
 }
 .hide {
-    display: none;
+    display: none !important;
 }
 .close {
     position: absolute;
@@ -205,7 +230,7 @@ footer a:focus {
     background-color: #ffffff;
     content: "";
     position: absolute;
-    right: 13%;
+    right: 15%;
     top: 47%;
     transform: rotate(-45deg);
 }
@@ -231,4 +256,99 @@ footer a:focus {
 .map_options li a:hover,
 .map_options li a:focus {
     background: #585454;
+}
+.image {
+    background-size: cover;
+    float: left;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+.time {
+    font-size: 5em;
+    font-weight: 300;
+}
+@media only screen and (max-width: 600px) {
+    .time {
+        font-size: 4em;
+    }
+    header .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .container img {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    header .container ul {
+        justify-content: center;
+    }
+    .map_options li a {
+        padding: 0px 1rem;
+    }
+}
+.zone {
+    padding: 10px 10px 0px 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+}
+.states {
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+}
+.text_box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.text_box::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.textbox input[type="text"],
+.textbox select,
+.textbox button {
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 1rem;
+    color: #000000;
+    font-family: "Chakra Petch", cursive;
+    font-weight: 400;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+.textbox button {
+    background: #000048;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0px;
+}
+.textbox button:hover,
+.textbox button:active {
+    background-color: #000000;
+}
+.content-box {
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    background: #fff;
+    padding: 2%;
+    border-radius: 10px;
 }
